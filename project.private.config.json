@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/bill-detail/index",
+          "pathName": "pages/bill-detail/index",
+          "query": "id=1",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

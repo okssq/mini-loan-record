@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/bill/index",
+    "pages/statistics/index",
+    "pages/bill-detail/index"
+  ],
+  "tabBar": {
+    "color": "#222222",
+    "selectedColor": "#FFB21A",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/bill/index",
+        "iconPath": "images/bill.png",
+        "selectedIconPath": "images/bill-active.png",
+        "text": "借款列表"
+      },
+      {
+        "pagePath": "pages/statistics/index",
+        "iconPath": "images/statistics.png",
+        "selectedIconPath": "images/statistics-active.png",
+        "text": "待还统计"
+      }
+    ]
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "darkmode": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

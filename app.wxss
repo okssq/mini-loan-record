@@ -1,0 +1,236 @@
+page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.full-width {
+  width: 100% !important;
+}
+.full-height {
+  height: 100% !important;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.row, .column {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+.items-center{
+  align-items: center;
+}
+.item-stretch{
+  align-items: stretch;
+}
+.item-end{
+  align-items: flex-end;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.flex1 {
+  flex: 1;
+}
+
+.q-pa-md{
+  padding: 8px;
+}
+.q-px-md{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.q-py-md{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.q-py-xs{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.q-pb-md{
+  padding-bottom: 8px;
+}
+.q-ml-md{
+  margin-left: 8px;
+}
+
+.q-mr-md{
+  margin-right: 8px;
+}
+.q-ma-md{
+  margin: 8px;
+}
+.q-mx-md {
+  margin-left:8px;
+  margin-right: 8px;
+}
+.q-my-md {
+  margin-top:8px;
+  margin-bottom: 8px;
+}
+.q-pa-lg{
+  padding:16px;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+.text-caption{
+  font-size: 14px;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+.text-blue-5{
+  color: rgb(66,165,245) !important;
+}
+.text-light-blue{
+  color: rgba(66,165,245,.6) !important;
+}
+.text-grey-6{
+  color: rgb(158,158,158) !important;
+}
+.text-grey-7{
+  color: rgb(117,117,117)!important;
+}
+.text-light-grey-7{
+  color: rgba(117,117,117,.6)!important;
+}
+.text-red-custom{
+  color: #FF4B68 !important;
+  font-weight: bold;
+}
+.text-light-bold{
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.my-nav{
+  z-index: 6000;
+  padding: 0 16px 12px;
+  box-sizing: border-box;
+  background-color: #FFB21A;
+}
+
+
+.bill{
+  font-size: 14px;
+}
+.line{
+  width: 8rpx;
+  background-color: rgb(224,224,224);
+  position: relative;
+}
+.line.active{
+  background-color:rgb(166,213,250) ;
+}
+.line:before {
+  position: absolute;
+  content: "";
+  width: 16rpx;
+  height: 8rpx;
+  left: -6rpx;
+  top: 36rpx;
+  background-color: rgb(158 158 158);
+}
+.line.active:before {
+  background-color: rgb(33 150 243);
+}
+.list-item-hover{
+  opacity: 0.9;
+  background: #f7f7f7;
+}
+
+.bill-title{
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.bill-text-caption{
+  font-size: 28rpx;
+  color: rgba(255,255,255,.8);
+}
+.place-money{
+  min-width: 80rpx;
+}
+.cir-section{
+  height: 46rpx;
+  line-height: 46rpx;
+}
+
+.start-cir::after{
+  position: absolute;
+  content: '';
+  width: 48rpx;
+  height: 24rpx;
+  background-color: rgb(166,213,250);
+  left: -22rpx;
+  bottom: -24rpx;
+  border-radius:48rpx 48rpx 0 0 ; 
+}
+.end-cir::after{
+  position: absolute;
+  content: '';
+  width: 48rpx;
+  height: 24rpx;
+  background-color: rgb(224,224,224);
+  left: -22rpx;
+  top: -24rpx;
+  border-radius:0 0 48rpx 48rpx;
+}
+.page-title{
+  font-size: 22px;
+  margin-left: 32rpx;
+  white-space: nowrap !important;
+}
+.page-grey{
+  background-color: #F2F1F6;
+}
+.list{
+  margin: 60rpx 60rpx 20rpx;
+  background-color: #ffffff;
+  border-radius: 24rpx;
+  flex: 0 1 auto;
+  overflow: auto;
+}
+.list-item{
+  padding: 16rpx 36rpx;
+  
+}
+.list-item + .list-item{
+  border-top: 1rpx solid rgb(242,242,242);
+}
+.ellipsis{
+  overflow: hidden;
+    /*文本不会换行*/
+  white-space: nowrap;
+    /*当文本溢出包含元素时，以省略号表示超出的文本*/
+  text-overflow: ellipsis;
+}
+.bill-label{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.bill-label-caption{
+  font-size: 28rpx;
+}
