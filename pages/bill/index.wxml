@@ -16,4 +16,7 @@
       </view>
     </view>
   </view>
+  <view class="bill-count">
+    共计{{bills.length}}条记录
+  </view>
 </view>

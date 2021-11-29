@@ -17,6 +17,12 @@
           "pathName": "pages/bill-detail/index",
           "query": "id=1",
           "scene": null
+        },
+        {
+          "name": "pages/statistics/index",
+          "pathName": "pages/statistics/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -1,1 +1,94 @@
 /* pages/bill-detail/index.wxss */
+page{
+  padding-bottom: 0;
+  background-color: #ffffff;
+}
+.my-nav{
+  z-index: 6000;
+  padding: 0 16px 12px;
+  box-sizing: border-box;
+  background-color: #FFB21A;
+}
+
+.bill-title{
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.bill-text-caption{
+  font-size: 28rpx;
+  color: rgba(255,255,255,.8);
+}
+.place-money{
+  min-width: 80rpx;
+}
+.bill{
+  font-size: 14px;
+}
+.bill-left{
+  width: 240rpx;
+  margin-right: 48rpx;
+  padding: 16rpx 0 !important;
+  position: relative;
+}
+.bill-left:before {
+  position: absolute;
+  content: "";
+  width: 8rpx  !important;
+  height: 100%  !important;
+  right: -28rpx !important;
+  top: 0  !important;
+  background-color: rgb(224,224,224);
+}
+.bill-left.active:before{
+  background-color: rgb(166,213,250);
+}
+.bill-left::after{
+  position: absolute;
+  content: "";
+  width: 20rpx  !important;
+  height: 8rpx  !important;
+  right: -34rpx  !important;
+  top: 32rpx  !important;
+  background-color: rgb(158 158 158);
+}
+.bill-left.active::after{
+  background-color: rgb(33 150 243);
+}
+.bill-right{
+  flex: 1;
+  padding: 16rpx 32rpx 16rpx 0 !important;
+  overflow: hidden;
+}
+
+.bill-tip{
+  height: 48rpx !important;
+  line-height: 48rpx;
+  font-size: 26rpx;
+  padding-left: 32rpx;
+  position: relative;
+  box-sizing: border-box;
+}
+.circle::before{
+  z-index: 100;
+  position: absolute;
+  content: '';
+  width: 52rpx;
+  height: 26rpx;
+  background-color: rgb(166,213,250);
+  border-radius: 52rpx 52rpx 0 0 ; 
+  left: 240rpx;
+  top: 0rpx;
+}
+.circle::after{
+  z-index: 100;
+  position: absolute;
+  content: '';
+  width: 52rpx;
+  height: 26rpx;
+  background-color: rgb(224,224,224);
+  left: 240rpx;
+  bottom: 0rpx;
+  border-radius:0 0 52rpx 52rpx;
+}

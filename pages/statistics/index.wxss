@@ -1,8 +1,63 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+page{
+  padding: 0;
 }
-.log-item {
-  margin: 10rpx;
+.my-bannner{
+  width: 100%;
+  height: 220rpx !important;
+  background-color: #FFB21A;
+}
+.today-main{
+  position: relative;
+  margin: 0 32rpx;
+  border-radius: 12rpx;
+  background-color: #fff;
+  box-shadow: 2px 0px 0px rgba(255,255,255,.7), 0 -2px 0 rgba(255,255,255,.7),;
+  transform: translateY(-160rpx);
+  padding: 40rpx 50rpx 30rpx;
+}
+.today{
+  position: absolute;
+  right: 0;
+  top: 40rpx;
+  font-size: 28rpx;
+  padding: 6rpx 12rpx;
+  background-color: rgba(255,178,26,.2);
+  color: rgba(255,178,26,.9);
+}
+.t1{
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: bold;
+}
+.t2 {
+  margin: 12rpx 0;
+  font-size: 52rpx;
+  font-weight: bold;
+  margin-left: -16rpx;
+}
+.t3{
+  font-size: 24rpx;
+  color: rgb(200,200,200);
+}
+
+.t-item{
+  padding: 12rpx 0;
+}
+.t-item+.t-item{
+  border-top: 2rpx solid rgba(255,255,255,0.1);
+}
+.t5.t6{
+  color: rgb(158,158,158);
+  font-size: 28rpx;
+}
+.t6{
+  font-size: 24rpx;
+}
+.t7{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.today-main + .today-main{
+  margin-top: 24rpx;
 }

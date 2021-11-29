@@ -1,9 +1,13 @@
 page{
   width: 100%;
   height: 100%;
+  padding-bottom: 164rpx;
+  box-sizing: border-box;
   overflow: hidden;
+  background-color: #F2F1F6;
 }
 .page{
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -50,6 +54,9 @@ page{
 
 .q-pa-md{
   padding: 8px;
+}
+.q-pl-md{
+  padding-left: 8px;
 }
 .q-px-md{
   padding-left: 8px;
@@ -124,113 +131,9 @@ page{
   color: #ffffff;
 }
 
-.my-nav{
-  z-index: 6000;
-  padding: 0 16px 12px;
-  box-sizing: border-box;
-  background-color: #FFB21A;
-}
 
-
-.bill{
-  font-size: 14px;
-}
-.line{
-  width: 8rpx;
-  background-color: rgb(224,224,224);
-  position: relative;
-}
-.line.active{
-  background-color:rgb(166,213,250) ;
-}
-.line:before {
-  position: absolute;
-  content: "";
-  width: 16rpx;
-  height: 8rpx;
-  left: -6rpx;
-  top: 36rpx;
-  background-color: rgb(158 158 158);
-}
-.line.active:before {
-  background-color: rgb(33 150 243);
-}
-.list-item-hover{
-  opacity: 0.9;
-  background: #f7f7f7;
-}
-
-.bill-title{
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-.bill-text-caption{
-  font-size: 28rpx;
-  color: rgba(255,255,255,.8);
-}
-.place-money{
-  min-width: 80rpx;
-}
-.cir-section{
-  height: 46rpx;
-  line-height: 46rpx;
-}
-
-.start-cir::after{
-  position: absolute;
-  content: '';
-  width: 48rpx;
-  height: 24rpx;
-  background-color: rgb(166,213,250);
-  left: -22rpx;
-  bottom: -24rpx;
-  border-radius:48rpx 48rpx 0 0 ; 
-}
-.end-cir::after{
-  position: absolute;
-  content: '';
-  width: 48rpx;
-  height: 24rpx;
-  background-color: rgb(224,224,224);
-  left: -22rpx;
-  top: -24rpx;
-  border-radius:0 0 48rpx 48rpx;
-}
 .page-title{
   font-size: 22px;
   margin-left: 32rpx;
   white-space: nowrap !important;
-}
-.page-grey{
-  background-color: #F2F1F6;
-}
-.list{
-  margin: 60rpx 60rpx 20rpx;
-  background-color: #ffffff;
-  border-radius: 24rpx;
-  flex: 0 1 auto;
-  overflow: auto;
-}
-.list-item{
-  padding: 16rpx 36rpx;
-  
-}
-.list-item + .list-item{
-  border-top: 1rpx solid rgb(242,242,242);
-}
-.ellipsis{
-  overflow: hidden;
-    /*文本不会换行*/
-  white-space: nowrap;
-    /*当文本溢出包含元素时，以省略号表示超出的文本*/
-  text-overflow: ellipsis;
-}
-.bill-label{
-  font-size: 36rpx;
-  font-weight: bold;
-}
-.bill-label-caption{
-  font-size: 28rpx;
 }

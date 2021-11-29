@@ -1,6 +1,5 @@
 <view class="page column no-wrap">
   <mp-navigation-bar background="#FFB21A" title="借款详情" color="#ffffff">
-
   </mp-navigation-bar>
   <view class="my-nav">
     <view class="bill-title" wx:if="{{bill}}">{{bill.label}}</view>
@@ -24,39 +23,34 @@
           <text>期</text>
         </view>
         <view>
-          <text decode="{{true}}">待还&nbsp;&nbsp;&nbsp;<text class="text-red-custom place-money">￥20906.00</text> </text>
+          <text decode="{{true}}">待还&nbsp;&nbsp;&nbsp;<text class="text-red-custom place-money">￥{{remainCount}}</text> </text>
         </view>
         <view>
         </view>
       </view>
     </view>
   </view>
-  <view class="flex1 overflow-auto row no-wrap justify-center">
+  <view class="flex1 overflow-auto">
     <view class="bill">
-      <view class="text-light-blue q-py-xs">
-        待还款
-      </view>
-      <view wx:for="{{notPaidList}}" wx:key="index" class="row no-wrap ">
-        <view class="q-pa-md">
+      <view class="bill-tip text-light-blue">待还款</view>
+      <view wx:for="{{notPaidList}}" wx:key="index" class="row no-wrap overflow-hidden">
+        <view class="bill-left active">
           <view class="text-right text-blue-5">第{{  returnedPeriod + index + 1 }}期</view>
-          <view class="text-grey-6 text-caption ">{{ item['day'] }} </view>
+          <view class="text-right text-grey-6 text-caption ">{{ item['day'] }} </view>
         </view>
-        <view class="line active {{index===notPaidList.length-1 ?'start-cir':''}}"></view>
-        <view class="q-pa-md">
+        <view class="bill-right">
           <view class="text-blue-5">{{ item['count'] }}.00</view>
           <view class="text-grey-6 text-caption">{{ item['desc'] }}</view>
         </view>
       </view>
-      <view class="text-light-grey-7 cir-section">
-        已还款
-      </view>
+      <view class="bill-tip text-light-grey-7 circle">待还款</view>
       <view wx:for="{{returnedList}}" wx:key="index" class="row no-wrap ">
-        <view class="q-pa-md">
+        <view class="bill-left">
           <view class="text-right text-grey-7">第{{ index + 1 }}期</view>
-          <view class="text-grey-6 text-caption ">{{ item['day'] }} </view>
+          <view class="text-right text-grey-6 text-caption ">{{ item['day'] }} </view>
         </view>
-        <view class="line {{index===0 ? 'end-cir' : ''}}"></view>
-        <view class="q-pa-md">
+        
+        <view class="bill-right">
           <view class="text-grey-7">{{ item['count'] }}.00</view>
           <view class="text-grey-6 text-caption">{{ item['desc'] }}</view>
         </view>

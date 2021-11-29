@@ -1,19 +1,44 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+.page-grey{
+  background-color: #F2F1F6;
 }
 
-.userinfo-avatar {
+
+.list{
+  margin: 60rpx 60rpx 20rpx;
+  background-color: #ffffff;
+  border-radius: 24rpx;
+  flex: 0 1 auto;
+  overflow: auto;
+}
+.list-item{
+  padding: 16rpx 32rpx;
+}
+.list-item + .list-item{
+  border-top: 2rpx solid rgb(242,242,242);
+}
+.list-item-hover{
+  opacity: 0.9;
+  background: #f7f7f7;
+}
+.ellipsis{
   overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+    /*文本不会换行*/
+  white-space: nowrap;
+    /*当文本溢出包含元素时，以省略号表示超出的文本*/
+  text-overflow: ellipsis;
+}
+.bill-label{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.bill-label-caption{
+  font-size: 28rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.bill-count{
+  text-align: center;
+  font-size: 24rpx;
+  /* font-weight: bold; */
+  color: #999999;
+  padding-top: 4rpx;
 }

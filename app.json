@@ -5,11 +5,11 @@
     "pages/bill-detail/index"
   ],
   "tabBar": {
+    "custom": true,
     "color": "#222222",
     "selectedColor": "#FFB21A",
-    "backgroundColor": "#ffffff",
-    "list": [
-      {
+    "backgroundColor": "#F2F1F6",
+    "list": [{
         "pagePath": "pages/bill/index",
         "iconPath": "images/bill.png",
         "selectedIconPath": "images/bill-active.png",
@@ -23,6 +23,11 @@
       }
     ]
   },
+  
+  "usingComponents": {
+    "custom-tab-bar": "custom-tab-bar/index"
+  },
+
   "useExtendedLib": {
     "weui": true
   },

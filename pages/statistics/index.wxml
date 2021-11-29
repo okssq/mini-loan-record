@@ -1,4 +1,38 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  statistics
+<view class="page page-grey overflow-auto">
+  <mp-navigation-bar back="{{false}}" color="#ffffff" background="#FFB21A" title="待还统计"></mp-navigation-bar>
+  <view class="my-bannner"></view>
+  <view class="today-main">
+    <view class="today">账单日{{month+1}}-{{day}}</view>
+    <view class="t1">今日应还</view>
+    <view class="t2">￥{{ todayCount }}.00</view>
+    <view class="t3" wx:if="{{todayCount}}">详细账单列表</view>
+    <view wx:for="{{todayList}}" wx:key="id" data-id="{{item.id}}" bindtap="viewBillDetail" class="t-item">
+      <view class="row justify-between items-center">
+        <view class="column">
+          <view class="t5">
+            {{ item['label'] }}
+          </view>
+          <view class="t6">{{month+1}}/{{day}} </view>
+        </view>
+        <view class="t7">￥{{ item['count'] }}</view>
+      </view>
+    </view>
+  </view>
+  <view class="today-main">
+    <view class="today">{{month+1}}月份账单</view>
+    <view class="t1">本月应还</view>
+    <view class="t2">￥{{ monthCount }}.00</view>
+    <view class="t3" wx:if="{{monthCount}}">详细账单列表</view>
+    <view wx:for="{{monthList}}" wx:key="id" data-id="{{item.id}}" bindtap="viewBillDetail" class="t-item">
+      <view class="row justify-between items-center">
+        <view class="column">
+          <view class="t5">
+            {{ item['label'] }}
+          </view>
+          <view class="t6">{{month+1}}/{{day}} </view>
+        </view>
+        <view class="t7">￥{{ item['count'] }}</view>
+      </view>
+    </view>
+  </view>
 </view>

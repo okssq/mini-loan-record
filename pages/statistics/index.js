@@ -1,12 +1,23 @@
-// logs.js
 const util = require('../../utils/util.js')
 
 Page({
   data: {
-    toDayCount: 0,
+    todayCount: 0,
     monthCount: 0,
     toDayList: [],
-    monthList: []
+    monthList: [],
+    month:0, 
+    day:0
+  },
+
+  viewBillDetail(e) {
+    const {
+      id
+    } = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `/pages/bill-detail/index?id=${id}`,
+    })
+    console.log(id)
   },
 
   getBillStats() {
@@ -46,14 +57,23 @@ Page({
       todayCount,
       monthCount,
       todayList,
-      monthList
+      monthList,
+      month, day
     }
   },
 
 
   onLoad() {
-    const {todayCount,monthCount,todayList,monthList} = this.getBillStats()
-    this.setData({todayCount,monthCount,todayList,monthList})
+    const {todayCount,monthCount,todayList,monthList,month, day} = this.getBillStats()
+    this.setData({todayCount,monthCount,todayList,monthList,month, day})
     console.log(todayCount,monthCount,todayList,monthList)
-  }
+  },
+
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 1
+      });
+    }
+  },
 })
