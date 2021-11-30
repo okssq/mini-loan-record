@@ -30,7 +30,6 @@ Page({
         returnedLength++
       }
     }
-
     let remainCount = 0
     const notPaidList = []
     const returnedList = []
@@ -42,7 +41,6 @@ Page({
         notPaidList.push(el)
       }
     })
-
     return {
       remainCount,
       notPaidList,
@@ -68,6 +66,5 @@ Page({
       notPaidList,
       returnedList,
     })
-    console.log(remainCount, notPaidList, returnedList)
   }
 })

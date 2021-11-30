@@ -2,23 +2,28 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    bills: util.bills,
+    bills: [],
+  },
+  
+  
+  onLoad() {
+    const newArr = util.bills.map(bill => {
+      const {hklb,...obj} = bill
+      obj.periods = hklb.length
+      return obj 
+    })
+    this.setData({bills:newArr})
+  },
+  onShow() {
+    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
+      this.getTabBar().setData({selected: 0});
+    }
   },
   // 事件处理函数
   viewBillDetail(e) {
-    const {
-      id
-    } = e.currentTarget.dataset;
+    const {id} = e.currentTarget.dataset;
     wx.navigateTo({
-      url: `../bill-detail/index?id=${id}`,
+      url: `/pages/bill-detail/index?id=${id}`,
     })
-    console.log(id)
-  },
-  onShow: function () {
-    if (typeof this.getTabBar === 'function' && this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 0
-      });
-    }
   },
 })

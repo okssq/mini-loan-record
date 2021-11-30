@@ -1,7 +1,6 @@
 const bills = [
   {
     id: 1,
-    value: 1,
     label: 'ssq借呗1',
     jkrq: '2021/04/07',
     jkje: 20000,
@@ -23,7 +22,6 @@ const bills = [
   },
   {
     id: 2,
-    value: 2,
     label: 'ssq借呗2',
     jkrq: '2021/11/07',
     jkje: 13000,
@@ -45,7 +43,6 @@ const bills = [
   },
   {
     id: 3,
-    value: 3,
     label: '花呗分期',
     jkrq: '2021/10/27',
     jkje: 10000,
@@ -67,7 +64,6 @@ const bills = [
   },
   {
     id: 4,
-    value: 4,
     label: '壮壮借呗1',
     jkrq: '2021/11/22',
     jkje: 40000,
@@ -89,7 +85,6 @@ const bills = [
   },
   {
     id: 5,
-    value: 5,
     label: '壮壮借呗2',
     jkrq: '2021/11/22',
     jkje: 20000,
@@ -111,7 +106,6 @@ const bills = [
   },
   {
     id: 6,
-    value: 6,
     label: '微信微粒贷1',
     jkrq: '2021/07/21',
     jkje: 40000,
@@ -131,7 +125,6 @@ const bills = [
   },
   {
     id: 7,
-    value: 7,
     label: '小米贷款-360借条',
     jkrq: '2021/10/31',
     jkje: 8000,
@@ -153,7 +146,6 @@ const bills = [
   },
   {
     id: 8,
-    value: 8,
     label: '美团生活费',
     jkrq: '2021/07/27',
     jkje: 14000,
@@ -175,7 +167,6 @@ const bills = [
   },
   {
     id: 9,
-    value: 9,
     label: '美团氧气贷',
     jkrq: '2021/10/31',
     jkje: 9000,
@@ -197,7 +188,6 @@ const bills = [
   },
   {
     id: 10,
-    value: 10,
     label: '京东金融白条',
     jkrq: '2021/10/31',
     jkje: 36000,

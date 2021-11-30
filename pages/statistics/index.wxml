@@ -1,5 +1,7 @@
 <view class="page page-grey overflow-auto">
-  <mp-navigation-bar back="{{false}}" color="#ffffff" background="#FFB21A" title="待还统计"></mp-navigation-bar>
+  <mp-navigation-bar back="{{false}}" color="#ffffff" background="#FFB21A">
+    <view slot="center" class="page-title">待还统计</view>
+  </mp-navigation-bar>
   <view class="my-bannner"></view>
   <view class="today-main">
     <view class="today">账单日{{month+1}}-{{day}}</view>
@@ -12,9 +14,9 @@
           <view class="t5">
             {{ item['label'] }}
           </view>
-          <view class="t6">{{month+1}}/{{day}} </view>
+          <view class="t6">{{year}}/{{month+1}}/{{day}} </view>
         </view>
-        <view class="t7">￥{{ item['count'] }}</view>
+        <view class="t7">￥{{ item['count'] }}.00</view>
       </view>
     </view>
   </view>
@@ -29,9 +31,9 @@
           <view class="t5">
             {{ item['label'] }}
           </view>
-          <view class="t6">{{month+1}}/{{day}} </view>
+          <view class="t6">{{year}}/{{month+1}}/{{day}} </view>
         </view>
-        <view class="t7">￥{{ item['count'] }}</view>
+        <view class="t7">￥{{ item['count'] }}.00</view>
       </view>
     </view>
   </view>

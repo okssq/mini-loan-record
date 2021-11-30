@@ -1,6 +1,10 @@
 page{
   padding: 0;
 }
+.page-title{
+  font-size: 36rpx;
+  white-space: nowrap !important;
+}
 .my-bannner{
   width: 100%;
   height: 220rpx !important;
@@ -27,7 +31,7 @@ page{
 .t1{
   font-size: 30rpx;
   color: #333333;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .t2 {
   margin: 12rpx 0;
@@ -46,14 +50,16 @@ page{
 .t-item+.t-item{
   border-top: 2rpx solid rgba(255,255,255,0.1);
 }
-.t5.t6{
-  color: rgb(158,158,158);
+.t5,.t6{
+  /* color: rgb(158,158,158);*/
+  color:#555555; 
   font-size: 28rpx;
 }
 .t6{
   font-size: 24rpx;
 }
 .t7{
+  color: #444444;
   font-size: 30rpx;
   font-weight: bold;
 }

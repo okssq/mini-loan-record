@@ -6,8 +6,9 @@ Page({
     monthCount: 0,
     toDayList: [],
     monthList: [],
-    month:0, 
-    day:0
+    year: 0,
+    month: 0,
+    day: 0
   },
 
   viewBillDetail(e) {
@@ -21,25 +22,45 @@ Page({
   },
 
   getBillStats() {
-    const {year, month, day} = util.getYearMonthDay()
+    const {
+      year,
+      month,
+      day
+    } = util.getYearMonthDay()
     let todayCount = 0
     let monthCount = 0
     let todayList = []
     let monthList = []
     util.bills.forEach(el => {
-      const {hklb} = el
+      const {
+        hklb
+      } = el
       hklb.forEach(_el => {
-      const [a, b, c] = _el['day'].split('/')
+        const [a, b, c] = _el['day'].split('/')
         if (a != year || b != month + 1) return
         if (c == day) {
-          const {id,label} = el
-          const {count} = _el
-          todayList.push({id,label,count})
+          const {
+            id,
+            label
+          } = el
+          const {
+            count
+          } = _el
+          todayList.push({
+            id,
+            label,
+            count
+          })
           todayCount += count
         }
         if (c >= day) {
-          const {id,label} = el
-          const {count} = _el
+          const {
+            id,
+            label
+          } = el
+          const {
+            count
+          } = _el
           const dayStr = `${a}/${b}/${c}`
           monthList.push({
             id,
@@ -58,15 +79,32 @@ Page({
       monthCount,
       todayList,
       monthList,
-      month, day
+      year,
+      month,
+      day
     }
   },
 
 
   onLoad() {
-    const {todayCount,monthCount,todayList,monthList,month, day} = this.getBillStats()
-    this.setData({todayCount,monthCount,todayList,monthList,month, day})
-    console.log(todayCount,monthCount,todayList,monthList)
+    const {
+      todayCount,
+      monthCount,
+      todayList,
+      monthList,
+      year,
+      month,
+      day
+    } = this.getBillStats()
+    this.setData({
+      todayCount,
+      monthCount,
+      todayList,
+      monthList,
+      year,
+      month,
+      day
+    })
   },
 
   onShow() {

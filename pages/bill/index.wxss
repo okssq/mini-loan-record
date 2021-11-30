@@ -1,7 +1,11 @@
 .page-grey{
   background-color: #F2F1F6;
 }
-
+.page-title{
+  font-size: 44rpx;
+  margin-left: 32rpx;
+  white-space: nowrap !important;
+}
 
 .list{
   margin: 60rpx 60rpx 20rpx;
@@ -11,10 +15,10 @@
   overflow: auto;
 }
 .list-item{
-  padding: 16rpx 32rpx;
+  padding: 18rpx 28rpx;
 }
 .list-item + .list-item{
-  border-top: 2rpx solid rgb(242,242,242);
+  border-top: 2rpx solid rgb(247,247,247);
 }
 .list-item-hover{
   opacity: 0.9;
@@ -22,23 +26,28 @@
 }
 .ellipsis{
   overflow: hidden;
-    /*文本不会换行*/
   white-space: nowrap;
-    /*当文本溢出包含元素时，以省略号表示超出的文本*/
   text-overflow: ellipsis;
 }
 .bill-label{
-  font-size: 36rpx;
-  font-weight: bold;
+  width: 100%;
+  font-size: 32rpx;
+  color: #333333;
+  margin-bottom: 4rpx;
 }
 .bill-label-caption{
   font-size: 28rpx;
+  color: #666666;
+}
+.bill-money{
+  font-size: 32rpx;
+  color: #222222;
+  width: 200rpx !important;
 }
 
 .bill-count{
   text-align: center;
   font-size: 24rpx;
-  /* font-weight: bold; */
-  color: #999999;
+  color: #333333;
   padding-top: 4rpx;
 }

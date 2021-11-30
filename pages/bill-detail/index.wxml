@@ -1,29 +1,27 @@
-<view class="page column no-wrap">
-  <mp-navigation-bar background="#FFB21A" title="借款详情" color="#ffffff">
+<view class="page column no-wrap overflow-hidden">
+  <mp-navigation-bar background="#FFB21A" color="#ffffff">
+    <view slot="center" class="page-title">借款详情</view>
   </mp-navigation-bar>
   <view class="my-nav">
     <view class="bill-title" wx:if="{{bill}}">{{bill.label}}</view>
     <view class="row justify-between item-end">
       <view class="bill-text-caption">
         <view class="q-py-xs">
-          <text decode="{{true}}">借款金额&nbsp;&nbsp;&nbsp;<text class="text-light-bold">￥{{bill.jkje}}</text></text>
+          <text decode="{{true}}">借款金额&nbsp;&nbsp;&nbsp;<text class="text-em">￥{{bill.jkje}}</text></text>
         </view>
         <view>
-          <text decode="{{true}}">借款日期&nbsp;&nbsp;&nbsp;<text class="text-light-bold">{{bill.jkrq}}</text></text>
-        </view>
-        <view>
+          <text decode="{{true}}">借款日期&nbsp;&nbsp;&nbsp;<text class="text-em place-money">{{bill.jkrq}}</text></text>
         </view>
       </view>
       <view class="bill-text-caption">
         <view class="q-py-xs row no-wrap">
           <text decode="{{true}}">已还&nbsp;&nbsp;&nbsp;</text>
-          <view class="flex1 text-center">
-            <text class="text-red-custom">{{returnedPeriod}}</text><text class="text-light-bold"> / {{totalPeriod}}</text>
+          <view class="flex1 text-right text-em">
+            {{returnedPeriod}}/{{totalPeriod}}期
           </view>
-          <text>期</text>
         </view>
         <view>
-          <text decode="{{true}}">待还&nbsp;&nbsp;&nbsp;<text class="text-red-custom place-money">￥{{remainCount}}</text> </text>
+          <text decode="{{true}}">待还&nbsp;&nbsp;&nbsp;<text class="text-em">￥{{remainCount}}</text> </text>
         </view>
         <view>
         </view>
@@ -32,27 +30,27 @@
   </view>
   <view class="flex1 overflow-auto">
     <view class="bill">
-      <view class="bill-tip text-light-blue">待还款</view>
+      <view class="bill-tip t1">待还款</view>
       <view wx:for="{{notPaidList}}" wx:key="index" class="row no-wrap overflow-hidden">
         <view class="bill-left active">
-          <view class="text-right text-blue-5">第{{  returnedPeriod + index + 1 }}期</view>
-          <view class="text-right text-grey-6 text-caption ">{{ item['day'] }} </view>
+          <view class="text-right text-main">第{{ returnedPeriod + index + 1 }}期</view>
+          <view class="text-right text-caption ">{{ item['day'] }} </view>
         </view>
         <view class="bill-right">
-          <view class="text-blue-5">{{ item['count'] }}.00</view>
-          <view class="text-grey-6 text-caption">{{ item['desc'] }}</view>
+          <view class="text-main">￥{{ item['count'] }}.00</view>
+          <view class="text-caption">{{ item['desc'] }}</view>
         </view>
       </view>
-      <view class="bill-tip text-light-grey-7 circle">待还款</view>
+      <view class="bill-tip t2 circle">待还款</view>
       <view wx:for="{{returnedList}}" wx:key="index" class="row no-wrap ">
         <view class="bill-left">
-          <view class="text-right text-grey-7">第{{ index + 1 }}期</view>
-          <view class="text-right text-grey-6 text-caption ">{{ item['day'] }} </view>
+          <view class="text-right text-caption">第{{ index + 1 }}期</view>
+          <view class="text-right text-caption ">{{ item['day'] }} </view>
         </view>
-        
+
         <view class="bill-right">
-          <view class="text-grey-7">{{ item['count'] }}.00</view>
-          <view class="text-grey-6 text-caption">{{ item['desc'] }}</view>
+          <view class="text-caption">￥{{ item['count'] }}.00</view>
+          <view class="text-caption">{{ item['desc'] }}</view>
         </view>
       </view>
     </view>
