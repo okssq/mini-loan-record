@@ -1,26 +1,25 @@
-<view class="page column no-wrap page-grey">
-  <mp-navigation-bar back="{{false}}" color="#000000" background="#F2F1F6">
-    <view slot="left" class="page-title">借款列表</view>
+<view class="page column no-wrap">
+  <mp-navigation-bar back="{{false}}" color="#ffffff" background="#2196F3">
+    <view slot="center" class="page-title">借款列表</view>
   </mp-navigation-bar>
-
-  <view class="list">
-    <view wx:for="{{bills}}" wx:for-item="item" wx:key="id" class="list-item row no-wrap justify-between items-center" hover-class="list-item-hover" data-id="{{item.id}}" bindtap="viewBillDetail">
-      <view class="flex1 overflow-hidden">
-        <view class="bill-label">
-          {{ item.label }}
+  <view class="place-primary"></view>
+  <view class="lay-main flex1 overflow-auto">
+    <view class="list">
+      <view wx:for="{{bills}}" wx:for-item="item" wx:key="id" class="list-item row no-wrap justify-between items-center" hover-class="list-item-hover" data-id="{{item.id}}" bindtap="viewBillDetail">
+        <view class="flex1 overflow-hidden">
+          <view class="bill-label">
+            {{ item.label }}
+          </view>
+          <view class="bill-label-caption text-grey-6 ellipsis">
+            <text decode="{{true}}">{{ item.jkrq }}&nbsp;&nbsp;&nbsp;</text>
+            <text decode="{{true}}">{{ item.hkfs }}&nbsp;&nbsp;&nbsp;</text>
+            <text>{{item.periods}}期</text>
+          </view>
         </view>
-        <view class="bill-label-caption text-grey-6 ellipsis">
-          <text decode="{{true}}">{{ item.jkrq }}&nbsp;&nbsp;&nbsp;</text>
-          <text decode="{{true}}">{{ item.hkfs }}&nbsp;&nbsp;&nbsp;</text>
-          <text>{{item.periods}}期</text>
+        <view class="bill-money text-right">
+          ￥{{item.jkje}}
         </view>
-      </view>
-      <view class="bill-money text-right">
-        ￥{{item.jkje}}
       </view>
     </view>
-  </view>
-  <view class="bill-count">
-    共计{{bills.length}}条记录
   </view>
 </view>

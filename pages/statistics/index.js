@@ -6,9 +6,8 @@ Page({
     monthCount: 0,
     toDayList: [],
     monthList: [],
-    year: 0,
+    todayStr: '',
     month: 0,
-    day: 0
   },
 
   viewBillDetail(e) {
@@ -18,7 +17,6 @@ Page({
     wx.navigateTo({
       url: `/pages/bill-detail/index?id=${id}`,
     })
-    console.log(id)
   },
 
   getBillStats() {
@@ -27,6 +25,7 @@ Page({
       month,
       day
     } = util.getYearMonthDay()
+    let todayStr
     let todayCount = 0
     let monthCount = 0
     let todayList = []
@@ -37,6 +36,7 @@ Page({
       } = el
       hklb.forEach(_el => {
         const [a, b, c] = _el['day'].split('/')
+        if(!todayStr) todayStr= _el['day']
         if (a != year || b != month + 1) return
         if (c == day) {
           const {
@@ -79,9 +79,8 @@ Page({
       monthCount,
       todayList,
       monthList,
-      year,
-      month,
-      day
+      todayStr,
+      month
     }
   },
 
@@ -92,18 +91,16 @@ Page({
       monthCount,
       todayList,
       monthList,
-      year,
-      month,
-      day
+      todayStr,
+      month
     } = this.getBillStats()
     this.setData({
       todayCount,
       monthCount,
       todayList,
       monthList,
-      year,
-      month,
-      day
+      todayStr,
+      month
     })
   },
 

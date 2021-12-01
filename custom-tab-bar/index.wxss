@@ -5,7 +5,7 @@
  right: 0;
  bottom: 0;
  z-index: 1000;
- height: 144rpx;
+ height: 140rpx;
  overflow: hidden;
  background-color: #F2F1F6;
  display: flex;
@@ -22,13 +22,14 @@
 }
 
 .tabbar-image{
-  width: 54rpx;
-  height: 54rpx;
+  width: 56rpx;
+  height: 56rpx;
 }
 .tabbar-txt{
-  font-size: 24rpx;
+  margin: 0 0 20rpx;
+  font-size: 26rpx;
   color: #222222;
 }
 .tab-bar-item.active .tabbar-txt{
-  color: #FFB21A;
+  color: #2196F3;
 }

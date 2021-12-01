@@ -1,9 +1,9 @@
 <view class="page column no-wrap overflow-hidden">
-  <mp-navigation-bar background="#FFB21A" color="#ffffff">
-    <view slot="center" class="page-title">借款详情</view>
+  <mp-navigation-bar background="#2196F3" color="#ffffff" back="{{false}}">
+    <image slot="left" class="page-back-img" src="/images/back.png" bindtap="goBack"></image>
+    <view slot="center" class="page-title">{{bill.label}}</view>
   </mp-navigation-bar>
   <view class="my-nav">
-    <view class="bill-title" wx:if="{{bill}}">{{bill.label}}</view>
     <view class="row justify-between item-end">
       <view class="bill-text-caption">
         <view class="q-py-xs">
@@ -41,7 +41,7 @@
           <view class="text-caption">{{ item['desc'] }}</view>
         </view>
       </view>
-      <view class="bill-tip t2 circle">待还款</view>
+      <view class="bill-tip t2 circle">已还款</view>
       <view wx:for="{{returnedList}}" wx:key="index" class="row no-wrap ">
         <view class="bill-left">
           <view class="text-right text-caption">第{{ index + 1 }}期</view>

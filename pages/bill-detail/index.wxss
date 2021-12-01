@@ -3,6 +3,15 @@ page{
   padding-bottom: 0;
   background-color: #ffffff;
 }
+.page-back-img{
+  width: 40rpx;
+  height: 40rpx;
+}
+.page-back{
+  text-decoration:underline;
+  font-size: 36rpx;
+  white-space: nowrap !important;
+}
 .page-title{
   font-size: 36rpx;
   white-space: nowrap !important;
@@ -10,9 +19,9 @@ page{
 
 .my-nav{
   z-index: 6000;
-  padding: 0 16px 12px;
+  padding: 36rpx;
   box-sizing: border-box;
-  background-color: #FFB21A;
+  background-color: #2196F3;
 }
 
 .bill-title{
@@ -22,16 +31,16 @@ page{
   margin-bottom: 8rpx;
 }
 .bill-text-caption{
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: rgba(255,255,255,.8);
 }
 .text-em{
-  font-size: 28rpx;
+  font-size: 26rpx;
   color: rgb(250,250,250); 
   font-weight: bold;
 }
 .q-py-xs{
-  padding: 4rpx 0;
+  padding-bottom: 12rpx;
 }
 .place-money{
   min-width: 80rpx;
@@ -58,7 +67,7 @@ page{
   background-color: rgb(224,224,224);
 }
 .bill-left.active:before{
-  background-color: rgba(255,178,26,.3);
+  background-color: rgba(33,150,243,.3);
 }
 .bill-left::after{
   position: absolute;
@@ -70,18 +79,18 @@ page{
   background-color: rgb(190,190,190);
 }
 .bill-left.active::after{
-  background-color: rgb(255,178,26);
+  background-color: rgb(33,150,243);
 }
 
 .t1{
-  color: rgba(255,178,26,.6);
+  color: rgba(33,150,243,.6);
 }
 .t2{
   color: rgba(117,117,117,.6);
 }
 .text-main{
   font-size: 28rpx;
-  color:rgb(255,178,26);
+  color:rgb(33,150,243);
 }
 .text-caption{
   font-size: 26rpx;
@@ -110,7 +119,7 @@ page{
   content: '';
   width: 38rpx;
   height: 19rpx;
-  background-color: rgba(255,178,26,.3);
+  background-color: rgba(33,150,243,.3);
   border-radius: 38rpx 38rpx 0 0 ; 
   left: 245rpx;
   top: 0rpx;

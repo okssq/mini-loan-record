@@ -1,5 +1,6 @@
 {
-  "backgroundColor": "#FFB21A",
+  "backgroundColor": "#2196F3",
+  "disableScroll": true,
   "navigationStyle": "custom",
   "usingComponents": {
     "mp-navigation-bar": "weui-miniprogram/navigation-bar/navigation-bar"

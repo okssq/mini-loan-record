@@ -7,7 +7,7 @@
   "tabBar": {
     "custom": true,
     "color": "#222222",
-    "selectedColor": "#FFB21A",
+    "selectedColor": "#2196F3",
     "backgroundColor": "#F2F1F6",
     "list": [{
         "pagePath": "pages/bill/index",

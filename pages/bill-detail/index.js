@@ -10,6 +10,12 @@ Page({
     returnedList: [],
   },
 
+  goBack(){
+    wx.navigateBack({
+      delta: 0,
+    })
+  },
+
   getTemplateData(list) {
     const {year,month,day} = util.getYearMonthDay()
     let returnedLength = 0
