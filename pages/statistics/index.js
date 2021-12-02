@@ -36,7 +36,7 @@ Page({
       } = el
       hklb.forEach(_el => {
         const [a, b, c] = _el['day'].split('/')
-        if(!todayStr) todayStr= _el['day']
+        
         if (a != year || b != month + 1) return
         if (c == day) {
           const {
@@ -74,6 +74,7 @@ Page({
       })
     })
     monthList.sort((a, b) => a['day'] - b['day'])
+    todayStr= `${year}/${month<8 ? '0'+(month+1) : (month+1)}/${day<8 ? '0'+day : day}`
     return {
       todayCount,
       monthCount,
