@@ -31,37 +31,16 @@ Page({
     let todayList = []
     let monthList = []
     util.bills.forEach(el => {
-      const {
-        hklb
-      } = el
-      hklb.forEach(_el => {
-        const [a, b, c] = _el['day'].split('/')
-        
-        if (a != year || b != month + 1) return
-        if (c == day) {
-          const {
-            id,
-            label
-          } = el
-          const {
-            count
-          } = _el
-          todayList.push({
-            id,
-            label,
-            count
-          })
-          todayCount += count
-        }
-        if (c >= day) {
-          const {
-            id,
-            label
-          } = el
-          const {
-            count
-          } = _el
+      const {hklb} = el
+      const {length} = hklb
+      for(let i =0;i<length;i++){
+        const item = hklb[i]
+        const [a, b, c] = item['day'].split('/')
+        if(a == year && b == month + 1){
           const dayStr = `${a}/${b}/${c}`
+          const {id,label} = el
+          const {count} = item
+          monthCount += count
           monthList.push({
             id,
             label,
@@ -69,10 +48,15 @@ Page({
             day: c,
             dayStr
           })
-          monthCount += count
+          if(c==day) {
+            todayList.push({id,label,count})
+            todayCount += count
+          }
+          break
         }
-      })
+      }
     })
+
     monthList.sort((a, b) => a['day'] - b['day'])
     todayStr= `${year}/${month<8 ? '0'+(month+1) : (month+1)}/${day<8 ? '0'+day : day}`
     return {
